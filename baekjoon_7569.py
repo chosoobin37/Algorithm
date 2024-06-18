@@ -1,8 +1,8 @@
 num=int(input())
-measurement=[]      # 전체 신체기록 
+measurement=[]      
 
 for i in range(num):
-    measure_list=[]     # 개인 신체기록
+    measure_list=[]     
     weight, height = map(int, input().split())
     measure_list.append(weight)
     measure_list.append(height)
