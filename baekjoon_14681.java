@@ -6,10 +6,10 @@ public class baekjoon_14681 {
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         int y = sc.nextInt();
-        sc.close();  // Scanner 닫기
+        sc.close();  
 
-        int quadrant = check_quadrant(x, y);  // 쿼드런트 계산
-        System.out.println(quadrant);  // 결과 출력
+        int quadrant = check_quadrant(x, y);  
+        System.out.println(quadrant);  
     }
 
     public static int check_quadrant(int x, int y) {
