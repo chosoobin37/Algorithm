@@ -1,17 +1,15 @@
 num = int(input())
-words = []
+count = 0
 
 for i in range(num):
-    get = input()
-    words.append(get)
+    word = input().strip()
+    is_group = True
+    for j in range(len(word)-1):
+        if word[j] != word[j+1]:
+            if word[j+1] in word[:j+1]:
+                is_group = False
+                break
+    if is_group:
+        count +=1
 
-# new_word = list(set(words))
-# new_word.sort()
-# new_word.sort(key = len)
-
-words = list(set(words))
-words.sort()
-words.sort(key = len)
-
-for i in words:
-    print(i)
+print(count)
