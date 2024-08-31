@@ -1,5 +1,5 @@
 import sys
-input = sys.stdin
+input = sys.stdin.readline
 
 dna, length = map(int, input().split())
 dnas = []
