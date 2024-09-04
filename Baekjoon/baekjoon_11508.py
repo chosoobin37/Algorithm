@@ -4,28 +4,17 @@ input = sys.stdin.readline
 num = int(input())
 dairy = []
 
-
 for i in range(num):
     drink = int(input())
     dairy.append(drink)
 
-cost = 0
-
 dairy.sort(reverse=True)
 
-# while dairy:
-for i in range(num // 3):
-    if len(dairy) > 3:
-        cost += dairy[i] + dairy[i+1]
-        dairy.remove(dairy[i])
-        dairy.remove(dairy[i+1])
-        dairy.remove(dairy[i+2])
-    elif len(dairy) == 2:
-        cost += dairy[i] + dairy[i+1]
-        dairy.remove(dairy[i])
-        dairy.remove(dairy[i+1])
-    elif len(dairy) == 1:
+cost = 0
+
+for i in range(len(dairy)):
+    # 3번째 상품은 무료로 계산
+    if i % 3 != 2:
         cost += dairy[i]
-        dairy.remove(dairy[i])
 
 print(cost)
